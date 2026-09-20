@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Lab Suite Pro",
+    "description": "Browser-based toolkit concept for practical laboratory workflows.",
+    "year": "2026",
+    "type": "project",
+    "category": "PROJECT"
+  },
+  {
+    "title": "Academic Portfolio",
+    "description": "An evolving personal research and learning platform.",
+    "year": "2026",
+    "type": "project",
+    "category": "PROJECT"
+  },
+  {
+    "title": "Biotechnology Coursework",
+    "description": "Structured study resources, presentations and practical learning.",
+    "year": "2024–Present",
+    "type": "academic",
+    "category": "ACADEMIC"
+  },
+  {
+    "title": "Independent Research",
+    "description": "Exploring nanobiotechnology and computational approaches through undergraduate research.",
+    "year": "2026",
+    "type": "project",
+    "category": "RESEARCH"
+  }
+]

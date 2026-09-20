@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Molecular Biology",
+    "description": "DNA, RNA, gene expression, genetics and molecular mechanisms."
+  },
+  {
+    "title": "Nanobiotechnology",
+    "description": "Carbon nanomaterials, optical sensing and bio-enabled materials."
+  },
+  {
+    "title": "Computational Biology",
+    "description": "Bioinformatics, data analysis and AI-assisted biological discovery."
+  },
+  {
+    "title": "Laboratory Science",
+    "description": "Microbiology, microscopy, molecular techniques and experimental workflows."
+  },
+  {
+    "title": "Interdisciplinary Research",
+    "description": "Connecting biology with materials science, computation and engineering."
+  },
+  {
+    "title": "Scientific Communication",
+    "description": "Research presentations, technical writing, visualization and documentation."
+  }
+]

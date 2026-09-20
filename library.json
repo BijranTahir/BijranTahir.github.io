@@ -1,0 +1,32 @@
+[
+  {
+    "title": "CV / Resume",
+    "description": "Add your latest CV here.",
+    "type": "PDF",
+    "file": "assets/documents/cv.pdf"
+  },
+  {
+    "title": "Research Presentations",
+    "description": "Upload PPT/PPTX files to the presentations folder.",
+    "type": "PPTX",
+    "file": "assets/presentations/"
+  },
+  {
+    "title": "Certificates",
+    "description": "Upload certificates and academic credentials.",
+    "type": "DOCUMENTS",
+    "file": "assets/certificates/"
+  },
+  {
+    "title": "Images",
+    "description": "Upload research, lab and academic images.",
+    "type": "MEDIA",
+    "file": "assets/images/"
+  },
+  {
+    "title": "Videos",
+    "description": "Upload or link demonstrations and presentations.",
+    "type": "VIDEO",
+    "file": "assets/videos/"
+  }
+]
