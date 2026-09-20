@@ -1,7 +1,7 @@
 const state={projects:[],library:[],research:[],timeline:[]};
 async function load(){
   for(const k of ["projects","library","research","timeline"]){
-    try{state[k]=await fetch(`data/${k}.json`).then(r=>r.json())}catch(e){state[k]=[]}
+    try{state[k]=await fetch(`${k}.json`).then(r=>r.json())}catch(e){state[k]=[]}
   }
   renderResearch(); renderProjects("all"); renderLibrary(); renderTimeline();
 }
