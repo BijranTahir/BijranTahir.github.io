@@ -1,83 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Tahir Ahmad Bijran — Biotechnology, research, laboratory science and computational biology portfolio.">
-  <title>Tahir Ahmad Bijran | Biotechnology</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="bg-grid"></div>
-<header class="nav">
-  <a class="brand" href="#home">TAB<span>.</span></a>
-  <button class="menu" aria-label="Open menu">☰</button>
-  <nav>
-    <a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a>
-    <a href="#library">Library</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
-    <button id="theme" class="icon-btn" aria-label="Toggle theme">☾</button>
-  </nav>
-</header>
-
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071310"><meta name="description" content="Tahir Ahmad Bijran — Biotechnology student, researcher and builder at the Central University of Kashmir."><title>Tahir Ahmad Bijran — Biotechnology</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="liquid-bg" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div><div class="liquid-ring ring-a"></div><div class="liquid-ring ring-b"></div></div><div class="grain"></div>
+<header class="topbar"><a class="profile-chip" href="#home"><img src="assets/images/profile.jpg" alt="Tahir Ahmad Bijran" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"></a><div class="topbar-right"><button id="theme" class="round-btn" aria-label="Toggle appearance">☼</button><button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<div id="menuPanel" class="menu-panel" aria-hidden="true"><div class="menu-backdrop" id="menuBackdrop"></div><aside class="menu-drawer"><div class="drawer-head"><span class="eyebrow">NAVIGATION</span><button id="closeMenu" class="close-btn">×</button></div><div class="drawer-profile"><img src="assets/images/profile.jpg" alt="" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"><div><b>Tahir Ahmad Bijran</b><span>Biotechnology • Research</span></div></div><nav class="drawer-nav"><a href="#home"><span>01</span>Home</a><a href="#about"><span>02</span>About</a><a href="#research"><span>03</span>Research</a><a href="#projects"><span>04</span>Projects</a><a href="#library"><span>05</span>Library</a><a href="#journey"><span>06</span>Journey</a><a href="#contact"><span>07</span>Contact</a></nav><div class="drawer-footer"><a href="https://github.com/BijranTahir" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:tahirbijran@cukashmir.edu.in">Email ↗</a></div></aside></div>
 <main>
-<section id="home" class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">BIOTECHNOLOGY • RESEARCH • COMPUTATIONAL BIOLOGY</p>
-    <h1>Tahir Ahmad<br><span>Bijran</span></h1>
-    <p class="lead">Undergraduate Biotechnology student exploring molecular biology, nanobiotechnology, laboratory science and computational approaches.</p>
-    <div class="actions">
-      <a class="btn" href="#research">Explore research <span>↗</span></a>
-      <a class="btn ghost" href="assets/documents/cv.pdf">View CV</a>
-    </div>
-    <div class="quick">
-      <span>Central University of Kashmir</span><span>•</span><span>Biotechnology</span>
-    </div>
-  </div>
-  <div class="hero-orbit" aria-hidden="true">
-    <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
-    <div class="core">DNA<br><small>×</small><br>DATA</div>
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="section-head"><p class="eyebrow">01 / PROFILE</p><h2>About me</h2></div>
-  <div class="two-col">
-    <div><p class="big">I’m Tahir Ahmad Bijran, an undergraduate Biotechnology student at the Central University of Kashmir.</p>
-      <p>My interests span molecular biology, nanobiotechnology, computational biology and interdisciplinary research. This website is my evolving academic workspace — a place to document what I learn, build, present and discover.</p></div>
-    <div class="facts"><div><b>Degree</b><span>B.Sc. (Hons) Biotechnology</span></div><div><b>Focus</b><span>Research & practical skills</span></div><div><b>Approach</b><span>Biology × computation × experimentation</span></div></div>
-  </div>
-</section>
-
-<section id="research" class="section">
-  <div class="section-head"><p class="eyebrow">02 / RESEARCH</p><h2>Areas of interest</h2></div>
-  <div id="research-grid" class="cards"></div>
-</section>
-
-<section id="projects" class="section">
-  <div class="section-head"><p class="eyebrow">03 / WORK</p><h2>Projects & work</h2></div>
-  <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="project">Projects</button><button class="filter" data-filter="academic">Academic</button></div>
-  <div id="project-grid" class="cards"></div>
-</section>
-
-<section id="library" class="section">
-  <div class="section-head"><p class="eyebrow">04 / DIGITAL LIBRARY</p><h2>Resources</h2></div>
-  <div class="library-tools"><input id="search" placeholder="Search your library…" type="search"><span id="count"></span></div>
-  <div id="library-grid" class="library"></div>
-  <p class="hint">To add a file: upload it to the matching <code>assets/</code> folder and add one entry to <code>data/library.json</code>.</p>
-</section>
-
-<section id="journey" class="section">
-  <div class="section-head"><p class="eyebrow">05 / JOURNEY</p><h2>Academic timeline</h2></div>
-  <div id="timeline" class="timeline"></div>
-</section>
-
-<section id="contact" class="section contact">
-  <div class="section-head"><p class="eyebrow">06 / CONNECT</p><h2>Let's connect.</h2></div>
-  <p class="big">For research discussions, collaboration, academic exchange or simply saying hello.</p>
-  <div class="actions"><a class="btn" href="mailto:tahirbijran@gmail.com">Email me ↗</a><a class="btn ghost" href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273">LinkedIn</a><a class="btn ghost" href="https://github.com/BijranTahir">GitHub</a></div>
-</section>
-</main>
-<footer><span>© 2026 Tahir Ahmad Bijran</span><span>Built for an evolving academic journey.</span></footer>
-<script src="app.js"></script>
-</body>
-</html>
+<section id="home" class="hero reveal"><div class="hero-copy"><p class="eyebrow">BIOTECHNOLOGY • RESEARCH • COMPUTATIONAL BIOLOGY</p><h1>Tahir Ahmad <span>Bijran</span></h1><p class="lead">Undergraduate Biotechnology student at the Central University of Kashmir, building a path across molecular biology, nanobiotechnology, computational biology and practical laboratory science.</p><div class="hero-actions"><a class="btn primary" href="#research">Explore research <span>↗</span></a><a class="btn" href="#about">Know me</a></div><div class="identity-line"><span>Central University of Kashmir</span><i></i><span>B.Sc. (Hons) Biotechnology</span></div></div><div class="hero-visual" aria-hidden="true"><div class="liquid-orbit orbit-1"></div><div class="liquid-orbit orbit-2"></div><div class="liquid-orbit orbit-3"></div><div class="bio-core"><span>DNA</span><b>×</b><span>DATA</span></div><div class="orbit-dot dot-1"></div><div class="orbit-dot dot-2"></div><div class="orbit-dot dot-3"></div></div></section>
+<section id="about" class="section reveal"><div class="section-kicker"><span>02</span><span>PROFILE</span></div><div class="section-title"><h2>Curious by nature.<br><em>Experimental by choice.</em></h2></div><div class="about-grid"><div class="about-copy"><p class="big">I’m <strong>Tahir Ahmad Bijran</strong>, an undergraduate Biotechnology student at the <strong>Central University of Kashmir</strong>.</p><p>My academic interests connect molecular biology, nanobiotechnology, computational biology and laboratory science. I use this space to document learning, projects, presentations, resources and the research direction I am developing.</p></div><div class="facts"><div><span>Degree</span><b>B.Sc. (Hons) Biotechnology</b></div><div><span>University</span><b>Central University of Kashmir</b></div><div><span>Interests</span><b>Molecular Biology · Nanobiotechnology · Computational Biology</b></div><div><span>Approach</span><b>Biology × computation × experimentation</b></div></div></div></section>
+<section id="research" class="section reveal"><div class="section-kicker"><span>03</span><span>RESEARCH</span></div><div class="section-title-row"><h2>Areas I’m exploring</h2><span class="section-note">01 — 06</span></div><div id="research-grid" class="research-grid"></div></section>
+<section id="projects" class="section reveal"><div class="section-kicker"><span>04</span><span>WORK</span></div><div class="section-title-row"><h2>Projects & academic work</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="project">Projects</button><button class="filter" data-filter="academic">Academic</button></div><div id="project-grid" class="project-grid"></div></section>
+<section id="library" class="section reveal"><div class="section-kicker"><span>05</span><span>DIGITAL LIBRARY</span></div><div class="section-title-row"><h2>Resources & documents</h2></div><div class="library-tools"><input id="search" placeholder="Search library…" type="search"><span id="count"></span></div><div id="library-grid" class="library-grid"></div></section>
+<section id="journey" class="section reveal"><div class="section-kicker"><span>06</span><span>JOURNEY</span></div><div class="section-title-row"><h2>Academic timeline</h2></div><div id="timeline" class="timeline"></div></section>
+<section id="contact" class="section contact reveal"><div class="section-kicker"><span>07</span><span>CONNECT</span></div><h2>Let’s build something<br><em>worth documenting.</em></h2><p>For research discussions, collaboration, academic exchange or simply saying hello.</p><div class="contact-links"><a href="mailto:tahirbijran@cukashmir.edu.in"><span>Email</span><b>tahirbijran@cukashmir.edu.in ↗</b></a><a href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273" target="_blank" rel="noopener"><span>LinkedIn</span><b>Connect on LinkedIn ↗</b></a><a href="https://github.com/BijranTahir" target="_blank" rel="noopener"><span>GitHub</span><b>@BijranTahir ↗</b></a></div></section></main>
+<footer><span>© 2026 Tahir Ahmad Bijran</span><span>Biotechnology • Research • Computational Biology</span></footer><script src="app.js"></script></body></html>
