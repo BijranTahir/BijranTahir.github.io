@@ -22,9 +22,11 @@
   },
   {
     "title": "Media Archive",
-    "description": "Images and videos published from the Admin Studio.",
+    "description": "Images and videos published from the Admin will appear here.",
     "type": "MEDIA",
     "file": "assets/images/",
-    "category": "Media"
+    "category": "Media",
+    "year": "",
+    "url": ""
   }
 ]
