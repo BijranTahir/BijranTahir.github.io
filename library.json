@@ -15,10 +15,12 @@
   },
   {
     "title": "Certificates",
-    "description": "Academic certificates and credentials published from the Admin Studio.",
+    "description": "Academic certificates and credentials published by the Admin will appear here.",
     "type": "DOCUMENTS",
     "file": "assets/certificates/",
-    "category": "Certificates"
+    "category": "Certificates",
+    "year": "",
+    "url": ""
   },
   {
     "title": "Media Archive",
