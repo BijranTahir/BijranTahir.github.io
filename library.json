@@ -8,10 +8,12 @@
   },
   {
     "title": "Research Presentations",
-    "description": "Presentation files published from the Admin Studio.",
+    "description": "Presentation files published by the Admin will appear here.",
     "type": "PPTX",
     "file": "assets/presentations/",
-    "category": "Presentations"
+    "category": "Presentations",
+    "year": "",
+    "url": ""
   },
   {
     "title": "Certificates",
