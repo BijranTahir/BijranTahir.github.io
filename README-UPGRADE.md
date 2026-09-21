@@ -27,3 +27,12 @@ Keep your existing `assets/` directory and profile image.
 Open `/admin.html` on your GitHub Pages site. The admin is restricted in code to the GitHub account `BijranTahir`.
 
 For the static GitHub Pages version, the admin uses a fine-grained GitHub token entered in the browser session. Restrict the token to this repository and Contents: Read and write. A production-grade OAuth/backend implementation can later remove the need for a browser-entered token.
+
+
+## IMPORTANT — Central Logo
+
+The hero's central BT / BIO-TECH circle has been changed to use:
+
+`assets/images/picture.jpg`
+
+Place your original logo at exactly that path. The surrounding orbital animation remains unchanged.
