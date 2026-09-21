@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "",
+    "category": "Test",
+    "description": "Test1",
+    "body": "Test3",
+    "date": "01 01 2001",
+    "featured": true,
+    "media": "Test4",
+    "type": "Test5"
+  }
+]
