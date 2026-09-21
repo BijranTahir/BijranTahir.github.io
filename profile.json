@@ -4,13 +4,13 @@
   "tagline": "Learning biology deeply. Building with technology. Documenting the journey.",
   "bio": "I’m an undergraduate Biotechnology student at the Central University of Kashmir, developing an interdisciplinary foundation across molecular biology, nanobiotechnology, computational biology, microbiology and practical laboratory science.",
   "summary": "My portfolio brings together academic learning, research exploration, digital projects, scientific communication and the resources I create along the way. I’m interested in understanding biological systems while using computation, visualization and modern digital tools to make scientific work more useful and accessible.",
-  "email": "tahirbijran@cukashmir.edu.in\ntahirbijran@gmail.com",
+  "email": "tahirbijran@cukashmir.edu.in",
   "linkedin": "https://www.linkedin.com/in/tahir-ahmad-bijran-183389273",
   "github": "BijranTahir",
   "university": "Central University of Kashmir",
   "department": "Biotechnology",
   "degree": "B.Sc. (Hons) Biotechnology",
-  "location": "Ganderbal, Jammu & Kashmir, India",
+  "location": "Jammu & Kashmir, India",
   "education": "Undergraduate studies in Biotechnology with an emphasis on molecular and cellular biology, microbiology, physiology, genetics, plant science and laboratory techniques.",
   "focus": [
     "Molecular Biology",
@@ -50,5 +50,6 @@
     "Interdisciplinary thinking",
     "Continuous learning"
   ],
-  "goals": "Build a strong interdisciplinary foundation for future research in biotechnology and computational life sciences, while turning academic learning into practical, well-documented work."
+  "goals": "Build a strong interdisciplinary foundation for future research in biotechnology and computational life sciences, while turning academic learning into practical, well-documented work.",
+  "alternateEmail": "tahirbijran@gmail.com"
 }
