@@ -1,30 +1,37 @@
 [
   {
     "title": "Lab Suite Pro",
-    "description": "Browser-based toolkit concept for practical laboratory workflows.",
+    "description": "A browser-based biotechnology toolkit concept focused on bringing practical laboratory utilities and scientific workflows into one accessible interface.",
     "year": "2026",
     "type": "project",
     "category": "PROJECT"
   },
   {
     "title": "Academic Portfolio",
-    "description": "An evolving personal research and learning platform.",
+    "description": "A high-tech personal research and learning platform for organizing academic work, research interests, projects, presentations, resources and scientific notes.",
     "year": "2026",
     "type": "project",
     "category": "PROJECT"
   },
   {
     "title": "Biotechnology Coursework",
-    "description": "Structured study resources, presentations and practical learning.",
+    "description": "Structured study resources, presentations, practical learning and topic-wise documentation developed throughout undergraduate Biotechnology studies.",
     "year": "2024–Present",
     "type": "academic",
     "category": "ACADEMIC"
   },
   {
-    "title": "Independent Research",
-    "description": "Exploring nanobiotechnology and computational approaches through undergraduate research.",
+    "title": "Independent Research Exploration",
+    "description": "Developing research questions at the intersection of nanobiotechnology, biological sensing, materials science and computational thinking.",
     "year": "2026",
     "type": "project",
     "category": "RESEARCH"
+  },
+  {
+    "title": "Scientific Web Development",
+    "description": "Designing responsive, data-driven web interfaces for presenting scientific information, digital resources and project documentation.",
+    "year": "2026",
+    "type": "project",
+    "category": "PROJECT"
   }
 ]

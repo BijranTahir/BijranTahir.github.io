@@ -1,32 +1,30 @@
 [
   {
     "title": "CV / Resume",
-    "description": "Add your latest CV here.",
+    "description": "Add the latest CV from the Admin Studio.",
     "type": "PDF",
-    "file": "assets/documents/cv.pdf"
+    "file": "assets/documents/cv.pdf",
+    "category": "Documents"
   },
   {
     "title": "Research Presentations",
-    "description": "Upload PPT/PPTX files to the presentations folder.",
+    "description": "Presentation files published from the Admin Studio.",
     "type": "PPTX",
-    "file": "assets/presentations/"
+    "file": "assets/presentations/",
+    "category": "Presentations"
   },
   {
     "title": "Certificates",
-    "description": "Upload certificates and academic credentials.",
+    "description": "Academic certificates and credentials published from the Admin Studio.",
     "type": "DOCUMENTS",
-    "file": "assets/certificates/"
+    "file": "assets/certificates/",
+    "category": "Certificates"
   },
   {
-    "title": "Images",
-    "description": "Upload research, lab and academic images.",
+    "title": "Media Archive",
+    "description": "Images and videos published from the Admin Studio.",
     "type": "MEDIA",
-    "file": "assets/images/"
-  },
-  {
-    "title": "Videos",
-    "description": "Upload or link demonstrations and presentations.",
-    "type": "VIDEO",
-    "file": "assets/videos/"
+    "file": "assets/images/",
+    "category": "Media"
   }
 ]

@@ -1,26 +1,32 @@
 [
   {
     "title": "Molecular Biology",
-    "description": "DNA, RNA, gene expression, genetics and molecular mechanisms."
+    "description": "Exploring DNA and RNA structure, replication, transcription, gene expression, genetics and the molecular mechanisms that connect sequence to cellular function.",
+    "category": "Research"
   },
   {
     "title": "Nanobiotechnology",
-    "description": "Carbon nanomaterials, optical sensing and bio-enabled materials."
+    "description": "Exploring nanoscale materials and biological interfaces, with interest in optical sensing, functional nanomaterials and bio-enabled technologies.",
+    "category": "Research"
   },
   {
     "title": "Computational Biology",
-    "description": "Bioinformatics, data analysis and AI-assisted biological discovery."
+    "description": "Learning how computation, data analysis and automation can support biological discovery, interpretation and reproducible research workflows.",
+    "category": "Research"
+  },
+  {
+    "title": "Bioinformatics",
+    "description": "Building familiarity with sequence-centric thinking, biological databases, computational tools and data-driven approaches to life-science questions.",
+    "category": "Research"
   },
   {
     "title": "Laboratory Science",
-    "description": "Microbiology, microscopy, molecular techniques and experimental workflows."
-  },
-  {
-    "title": "Interdisciplinary Research",
-    "description": "Connecting biology with materials science, computation and engineering."
+    "description": "Developing practical understanding of microscopy, microbiology, staining, observation, documentation and experimental workflows.",
+    "category": "Research"
   },
   {
     "title": "Scientific Communication",
-    "description": "Research presentations, technical writing, visualization and documentation."
+    "description": "Turning complex scientific ideas into clear presentations, visual explanations, organized notes and accessible digital resources.",
+    "category": "Research"
   }
 ]

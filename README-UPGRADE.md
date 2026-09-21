@@ -1,24 +1,29 @@
-# Tahir Ahmad Bijran — Website Upgrade
+# Tahir Ahmad Bijran — High-Tech Website Upgrade
 
-Replace the existing `index.html`, `style.css`, and `app.js` in the repository with these versions.
+## What this adds
 
-## Add your profile image
-Upload your own photo as:
-`assets/images/profile.jpg`
+- Expanded academic/profile content
+- Dedicated Research, Expertise, Projects, Library, Field Notes and Journey sections
+- Dynamic profile, skills, lab skills, tools and working principles
+- Dynamic categories
+- **Content Studio**: upload a photo/video/audio/document, enter a title + description + body text, choose a category and publish
+- Published media + text automatically appears in the public **Field Notes** section
+- File Manager for repository uploads/deletion
+- Searchable library
+- Responsive high-tech UI with dark/light mode, animated ambient background and responsive navigation
 
-The top-left circular image and the hamburger-menu profile automatically use it. Until then, a biotech placeholder is shown.
+## Files
 
-## Included
-- roaming liquid/aurora background
-- revolving orbital biotech visual
-- smooth scroll and reveal animations
-- hamburger navigation drawer with page scrolling locked while open
-- dark/light appearance
-- updated email: `tahirbijran@cukashmir.edu.in`
-- expanded academic profile
-- responsive mobile/desktop layout
-- research, projects, library, journey and contact sections
-- search and project filters
-- reduced-motion accessibility support
+Replace the matching root files in `BijranTahir/BijranTahir.github.io`:
+`index.html`, `style.css`, `app.js`, `profile.json`, `research.json`, `projects.json`, `library.json`, `timeline.json`, `admin.html`, `admin.css`, `admin.js`.
 
-The existing root JSON files remain compatible.
+Add:
+`content.json`, `categories.json`.
+
+Keep your existing `assets/` directory and profile image.
+
+## Admin
+
+Open `/admin.html` on your GitHub Pages site. The admin is restricted in code to the GitHub account `BijranTahir`.
+
+For the static GitHub Pages version, the admin uses a fine-grained GitHub token entered in the browser session. Restrict the token to this repository and Contents: Read and write. A production-grade OAuth/backend implementation can later remove the need for a browser-entered token.
