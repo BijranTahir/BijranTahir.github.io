@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42e0b0"/><stop offset="1" stop-color="#0d4e43"/></linearGradient></defs><rect width="200" height="200" rx="100" fill="#0b1f1a"/><circle cx="100" cy="100" r="76" fill="url(#g)" opacity=".85"/><path d="M62 76c20-28 56-28 76 0M62 124c20 28 56 28 76 0M72 62c30 20 30 56 0 76M128 62c-30 20-30 56 0 76" fill="none" stroke="#eafff8" stroke-width="5" stroke-linecap="round" opacity=".85"/><text x="100" y="108" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="25" fill="#071310">TAB</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42e0b0"/><stop offset="1" stop-color="#0d3a32"/></linearGradient></defs>
+<rect width="200" height="200" rx="100" fill="#071310"/><circle cx="100" cy="100" r="96" fill="url(#g)" opacity=".22"/>
+<circle cx="100" cy="78" r="35" fill="#cfe9e2"/><path d="M38 174c8-37 31-55 62-55s54 18 62 55" fill="#cfe9e2"/>
+<circle cx="100" cy="100" r="96" fill="none" stroke="#42e0b0" stroke-width="3"/>
+<text x="100" y="188" text-anchor="middle" fill="#42e0b0" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2">TAHIR AHMAD BIJRAN</text></svg>
