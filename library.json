@@ -1,10 +1,12 @@
 [
   {
     "title": "CV / Resume",
-    "description": "Add the latest CV from the Admin Studio.",
+    "description": "CV from the Admin will appear here.",
     "type": "PDF",
     "file": "assets/documents/cv.pdf",
-    "category": "Documents"
+    "category": "Documents",
+    "year": "",
+    "url": ""
   },
   {
     "title": "Research Presentations",
