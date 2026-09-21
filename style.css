@@ -21,3 +21,33 @@
 @media(max-width:560px){
   .core-center{width:105px;height:105px;padding:4px}
 }
+
+/* FIX: central hero logo — no name text, actual image only */
+.core-center{
+  width:150px!important;
+  height:150px!important;
+  padding:5px!important;
+  border-radius:50%!important;
+  overflow:hidden!important;
+  display:block!important;
+  background:#06110f!important;
+  border:1.5px solid #42e0b0!important;
+  box-shadow:0 0 45px #42e0b060,0 0 100px #42e0b018!important;
+  position:relative!important;
+  z-index:5!important;
+}
+.core-center img{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:50%!important;
+}
+@media(max-width:560px){
+  .core-center{
+    width:118px!important;
+    height:118px!important;
+    padding:4px!important;
+  }
+}

@@ -33,6 +33,17 @@ For the static GitHub Pages version, the admin uses a fine-grained GitHub token 
 
 The hero's central BT / BIO-TECH circle has been changed to use:
 
-`assets/images/picture.jpg`
+`assets/images/profile.jpg`
 
 Place your original logo at exactly that path. The surrounding orbital animation remains unchanged.
+
+
+## Central Hero Logo Fix
+
+The hero core now contains NO generated text. It loads:
+`assets/images/profile.jpg`
+
+The central hero directly uses your saved `profile.jpg`.
+
+For the exact logo you requested, upload your original `picture.jpg` to:
+`assets/images/profile.jpg`
