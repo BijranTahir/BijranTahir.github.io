@@ -67,3 +67,118 @@
 .light .motif-input,.light .growth-chart{background:#f6fbf9}.light .checklist-card{background:#fff}
 @media(max-width:900px){.research-stats{grid-template-columns:repeat(2,1fr)}.checklist{grid-template-columns:1fr}}
 @media(max-width:560px){.research-stats{grid-template-columns:repeat(2,1fr)}.growth-chart{height:230px}}
+
+/* V5 — colorful scientific controls / no default white browser boxes */
+:root{
+  --neon:#42e0b0;
+  --neon2:#18d9c4;
+  --blue:#39bfff;
+  --purple:#9b6cff;
+  --pink:#ff5f87;
+  --amber:#ffb84d;
+  --control:#061a17;
+}
+
+/* All form controls use the site's visual language instead of browser-default white */
+input, textarea, select, button{font:inherit}
+input:not([type="file"]), textarea, select{
+  color:var(--text)!important;
+  background:linear-gradient(145deg,#09241f,#04130f)!important;
+  border:1px solid #24584c!important;
+  border-radius:12px;
+  box-shadow:inset 0 1px 0 #ffffff08, 0 0 0 1px #0002;
+  outline:none;
+  transition:border-color .2s, box-shadow .2s, transform .2s, background .2s;
+}
+input:not([type="file"]):focus, textarea:focus, select:focus{
+  border-color:var(--neon)!important;
+  box-shadow:0 0 0 3px #42e0b01c, 0 0 24px #42e0b012, inset 0 1px 0 #ffffff0a;
+}
+input::placeholder, textarea::placeholder{color:#75948d!important;opacity:1}
+textarea{resize:vertical}
+select option{background:#071713;color:#effcf8}
+
+/* Numeric / text controls in calculators and experiments */
+.calc-fields input,.utility-row input,.controls input{
+  min-height:44px!important;
+  padding:10px 13px!important;
+}
+.sequence-input,.data-input,.motif-input{
+  background:linear-gradient(145deg,#041b17,#020d0b)!important;
+  border-color:#236e5e!important;
+  box-shadow:inset 0 0 30px #18d9c40b!important;
+}
+.sequence-input:focus,.data-input:focus,.motif-input:focus{border-color:var(--blue)!important;box-shadow:0 0 0 3px #39bfff18,0 0 35px #39bfff12!important}
+
+/* Colorful buttons */
+.btn{
+  cursor:pointer;
+  border-color:#24584c!important;
+  background:linear-gradient(135deg,#102d27,#0a1c18)!important;
+  color:#dffaf3!important;
+  box-shadow:0 8px 24px #0003, inset 0 1px 0 #ffffff0a;
+}
+.btn:hover{box-shadow:0 10px 30px #0005,0 0 22px #42e0b018;transform:translateY(-2px)}
+.btn.primary{
+  background:linear-gradient(135deg,#42e0b0,#18d9c4)!important;
+  border-color:#42e0b0!important;
+  color:#03110e!important;
+  box-shadow:0 8px 28px #42e0b02b, inset 0 1px 0 #ffffff55;
+}
+#timerReset,#stopwatchReset,#clearQuickNote,#clearTool,#clearData{
+  background:linear-gradient(135deg,#3b1821,#2a1118)!important;
+  border-color:#ff5f8766!important;color:#ff9bb4!important;
+}
+#stopwatchLap{background:linear-gradient(135deg,#10305b,#123f72)!important;border-color:#39bfff77!important;color:#9cddff!important}
+#downloadCSV,#exportChart,#simExport{background:linear-gradient(135deg,#25144b,#3b2070)!important;border-color:#9b6cff77!important;color:#d9c9ff!important}
+#calcBeer,#calcRCF{background:linear-gradient(135deg,#11364b,#155b72)!important;border-color:#39bfff77!important;color:#b8ecff!important}
+#calcMolarity{background:linear-gradient(135deg,#183d2a,#176342)!important;border-color:#42e0b077!important;color:#bfffe9!important}
+#calcDilution{background:linear-gradient(135deg,#3c2a12,#704d18)!important;border-color:#ffb84d77!important;color:#ffe1a3!important}
+#runSim{background:linear-gradient(135deg,#42e0b0,#20b8d4)!important}
+#saveQuickNote{background:linear-gradient(135deg,#18bfa5,#198de0)!important;border-color:#18d9c4!important;color:white!important}
+#plotData{background:linear-gradient(135deg,#42e0b0,#20c98c)!important}
+
+/* BioTools tabs become pill-like color-coded controls */
+.tool-tab{
+  border:1px solid #24584c!important;
+  background:linear-gradient(135deg,#0a211c,#061510)!important;
+  color:#9bbdb5!important;
+  border-radius:999px!important;
+  padding:9px 13px!important;
+  cursor:pointer;
+  transition:.2s;
+}
+.tool-tab:hover{border-color:#39bfff!important;color:#dffaff!important;box-shadow:0 0 18px #39bfff18}
+.tool-tab.active{background:linear-gradient(135deg,#42e0b0,#18d9c4)!important;color:#03110e!important;border-color:#42e0b0!important;box-shadow:0 0 25px #42e0b02b}
+
+/* Upload control */
+.file-drop{background:linear-gradient(135deg,#071f1a,#061713)!important;border-color:#24584c!important;box-shadow:inset 0 0 30px #39bfff08}
+.file-drop:hover{border-color:#39bfff!important;box-shadow:0 0 25px #39bfff12}
+.file-drop span{background:linear-gradient(90deg,#42e0b0,#39bfff);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+
+/* Results and output blocks */
+.calc-result,.data-summary,.tool-result,.sim-result{
+  background:linear-gradient(145deg,#061c17,#04120f)!important;
+  border:1px solid #24584c;
+  box-shadow:inset 0 0 24px #42e0b008;
+}
+.tool-result code,.tool-result pre{background:#03110e!important;border-color:#24584c!important;color:#bfffe9!important}
+
+/* Color-coded experiment result cards */
+.sim-result .result-card:nth-child(1),.sim-result>div:nth-child(1){border-color:#39bfff55!important}
+.sim-result .result-card:nth-child(2),.sim-result>div:nth-child(2){border-color:#42e0b055!important}
+
+/* Light mode keeps colorful accents without white-looking inputs */
+.light input:not([type="file"]),.light textarea,.light select{
+  background:linear-gradient(145deg,#f7fffc,#e9f8f3)!important;
+  color:#0a211b!important;
+  border-color:#b8ddd3!important;
+}
+.light .btn{background:linear-gradient(135deg,#eefaf6,#dff3ed)!important;color:#0a211b!important}
+.light .btn.primary{background:linear-gradient(135deg,#0aa77f,#18a9bd)!important;color:#fff!important}
+
+@media(max-width:620px){
+  .btn{padding:11px 15px}
+  .tool-tabs{gap:6px}
+  .tool-tab{padding:8px 10px!important;font-size:11px}
+}
