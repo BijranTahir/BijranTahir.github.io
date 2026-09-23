@@ -79,7 +79,17 @@
   function setupChecklist(){ const box=$('#researchChecklist');if(!box)return;box.addEventListener('change',e=>{if(!e.target.matches('input[type=checkbox]'))return;const vals=$$('input[type=checkbox]',box).map(x=>x.checked);localStorage.setItem('researchChecklist',JSON.stringify(vals));}); const vals=JSON.parse(localStorage.getItem('researchChecklist')||'[]');$$('input[type=checkbox]',box).forEach((x,i)=>x.checked=Boolean(vals[i])); }
   function renderChecklist(){const e=$('#researchChecklist');if(!e)return;const items=['Define the research question','Search and organize literature','Plan controls and variables','Collect observations / data','Analyze and visualize results','Document methods and limitations','Review references','Prepare a reproducible summary'];e.innerHTML=items.map((x,i)=>`<label><input type="checkbox"> <span>${i+1}. ${esc(x)}</span></label>`).join('');setupChecklist();}
 
+  function setupReveal(){
+    const els=$$('.reveal');
+    if(!els.length) return;
+    document.documentElement.classList.add('js-ready');
+    if(!('IntersectionObserver' in window)){ els.forEach(x=>x.classList.add('visible')); return; }
+    const io=new IntersectionObserver((entries)=>entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('visible'); io.unobserve(entry.target); }}),{rootMargin:'0px 0px -8% 0px',threshold:.01});
+    els.forEach((el,i)=>{el.style.transitionDelay=Math.min(i*25,180)+'ms'; io.observe(el);});
+  }
+
   function setupUI(){
+    setupReveal();
     $$('.filter').forEach(b=>b.addEventListener('click',()=>{$$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderProjects();}));
     $('#search')?.addEventListener('input',renderLibrary); $('#paperSearch')?.addEventListener('input',renderPublications);
     $$('.tool-tab').forEach(b=>b.addEventListener('click',()=>{$$('.tool-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');currentTool=b.dataset.tool;const mi=$('#motifInput');if(mi)mi.hidden=currentTool!=='motif';}));
