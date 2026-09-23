@@ -2,107 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#06110f">
-<meta name="description" content="Tahir Ahmad Bijran — Biotechnology, research, computational biology and scientific projects.">
-<title>Tahir Ahmad Bijran — Biotechnology & Research</title>
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#06110f"><meta name="description" content="Tahir Ahmad Bijran — Biotechnology, research, computational biology and scientific tools.">
+<link rel="manifest" href="pwa-manifest.json"><link rel="icon" href="assets/images/profile.jpg" type="image/jpeg">
+<title>Tahir Ahmad Bijran — BioLab OS</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="ambient"><span></span><span></span><span></span></div>
-<div class="grid-overlay"></div>
-
-<header class="topbar">
-  <a class="profile-chip" href="#home"><img src="assets/images/profile.jpg" alt="Tahir Ahmad Bijran" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"></a>
-  <div class="topbar-actions"><button id="theme" class="icon-btn" aria-label="Toggle theme">☼</button><button id="menuBtn" class="menu-btn" aria-label="Open navigation"><i></i><i></i><i></i></button></div>
-</header>
-
-<div id="menuPanel" class="menu-panel" aria-hidden="true">
-  <div id="menuBackdrop" class="menu-backdrop"></div>
-  <aside class="drawer">
-    <div class="drawer-head"><span class="micro">NAVIGATION</span><button id="closeMenu" class="close">×</button></div>
-    <div class="drawer-id"><img src="assets/images/profile.jpg" alt="" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"><div><b>Tahir Ahmad Bijran</b><span>Biotechnology • Research</span></div></div>
-    <nav class="drawer-nav">
-      <a href="#home"><span>01</span>Home</a><a href="#about"><span>02</span>About</a><a href="#research"><span>03</span>Research</a><a href="#expertise"><span>04</span>Expertise</a><a href="#projects"><span>05</span>Projects</a><a href="#library"><span>06</span>Library</a><a href="#field-notes"><span>07</span>Field Notes</a><a href="#journey"><span>08</span>Journey</a><a href="#contact"><span>09</span>Contact</a>
-    </nav>
-    <div class="drawer-foot"><a href="https://github.com/BijranTahir" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273" target="_blank">LinkedIn ↗</a><a href="mailto:tahirbijran@cukashmir.edu.in">Email ↗</a></div>
-  </aside>
-</div>
-
+<div class="ambient"><span></span><span></span><span></span></div><div class="grid-overlay"></div>
+<header class="topbar"><a class="profile-chip" href="#home"><img src="assets/images/profile.jpg" alt="Tahir Ahmad Bijran" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"></a><div class="topbar-actions"><button id="commandBtn" class="icon-btn" aria-label="Open command palette">⌘</button><button id="theme" class="icon-btn" aria-label="Toggle theme">☼</button><button id="menuBtn" class="menu-btn" aria-label="Open navigation"><i></i><i></i><i></i></button></div></header>
+<div id="menuPanel" class="menu-panel" aria-hidden="true"><div id="menuBackdrop" class="menu-backdrop"></div><aside class="drawer"><div class="drawer-head"><span class="micro">BIOLAB OS / NAVIGATION</span><button id="closeMenu" class="close">×</button></div><div class="drawer-id"><img src="assets/images/profile.jpg" alt="" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"><div><b>Tahir Ahmad Bijran</b><span>Biotechnology • Research</span></div></div><nav class="drawer-nav">
+<a href="#home"><span>01</span>Home</a><a href="#research"><span>02</span>Research</a><a href="#lab-dashboard"><span>03</span>Research Dashboard</a><a href="#biotools"><span>04</span>BioTools</a><a href="#data-studio"><span>05</span>Data Studio</a><a href="#experiments"><span>06</span>Experiments</a><a href="#microscopy"><span>07</span>Microscopy</a><a href="#notebook"><span>08</span>Lab Notebook</a><a href="#literature"><span>09</span>Literature</a><a href="#protocols"><span>10</span>Protocols</a><a href="#projects"><span>11</span>Projects</a><a href="#library"><span>12</span>Library</a><a href="#journey"><span>13</span>Journey</a><a href="#contact"><span>14</span>Contact</a></nav><div class="drawer-foot"><a href="https://github.com/BijranTahir" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:tahirbijran@cukashmir.edu.in">Email ↗</a></div></aside></div>
 <main>
-<section id="home" class="hero reveal">
-  <div class="hero-copy">
-    <div class="micro">BIOTECHNOLOGY / RESEARCH / COMPUTATIONAL BIOLOGY</div>
-    <div class="status-line"><span></span> ACADEMIC PORTFOLIO • 2026</div>
-    <h1>Tahir Ahmad <em>Bijran</em></h1>
-    <p id="heroLead" class="hero-lead">Undergraduate Biotechnology student at the Central University of Kashmir, building a path across molecular biology, nanobiotechnology, computational biology and practical laboratory science.</p>
-    <div class="hero-actions"><a class="btn primary" href="#research">Explore research ↗</a><a class="btn" href="#field-notes">Open field notes</a></div>
-    <div class="identity"><span id="degreeLine">B.Sc. (Hons) Biotechnology</span><b></b><span>Central University of Kashmir</span></div>
-  </div>
-  <div class="hero-visual">
-    <div class="core">
-      <div class="core-ring r1"></div><div class="core-ring r2"></div><div class="core-ring r3"></div>
-      <div class="core-orbit o1"><i></i></div><div class="core-orbit o2"><i></i></div><div class="core-orbit o3"><i></i></div>
-      <div class="core-center"><img src="assets/images/profile.jpg" alt="TB logo"></div>
-      <span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span><span class="particle p4"></span>
-    </div>
-  </div>
-</section>
+<section id="home" class="hero reveal"><div class="hero-copy"><div class="micro">BIOTECHNOLOGY / RESEARCH / COMPUTATIONAL BIOLOGY</div><div class="status-line"><span></span> BIOLOGY × COMPUTATION × EXPERIMENTATION</div><h1>Tahir Ahmad <em>Bijran</em></h1><p id="heroLead" class="hero-lead">Undergraduate Biotechnology student building a path across molecular biology, nanobiotechnology, computational biology and practical laboratory science.</p><div class="hero-actions"><a class="btn primary" href="#lab-dashboard">Open BioLab OS ↗</a><a class="btn" href="#research">Explore research</a><button class="btn" id="installBtn" hidden>Install BioLab</button></div><div class="identity"><span id="degreeLine">B.Sc. (Hons) Biotechnology</span><b></b><span>Central University of Kashmir</span></div></div><div class="hero-visual"><div class="core"><div class="core-ring r1"></div><div class="core-ring r2"></div><div class="core-ring r3"></div><div class="core-orbit o1"><i></i></div><div class="core-orbit o2"><i></i></div><div class="core-orbit o3"><i></i></div><div class="core-center"><img src="assets/images/profile.jpg" alt="Tahir Ahmad Bijran logo" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'"></div><span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span><span class="particle p4"></span></div></div></section>
 
-<section id="about" class="section reveal">
-  <div class="section-kicker"><span>02</span><span>PROFILE</span></div>
-  <div class="title-row"><h2>Curious by nature.<br><em>Experimental by choice.</em></h2><span class="section-code">PROFILE.01</span></div>
-  <div class="about-grid">
-    <div class="about-copy"><p class="big">I’m <strong id="aboutName">Tahir Ahmad Bijran</strong>, an undergraduate Biotechnology student at the <strong>Central University of Kashmir</strong>.</p><p id="aboutSummary"></p><p id="aboutBio"></p></div>
-    <div class="facts"><div><span>Degree</span><b id="factDegree">B.Sc. (Hons) Biotechnology</b></div><div><span>University</span><b>Central University of Kashmir</b></div><div><span>Location</span><b id="factLocation">Jammu & Kashmir, India</b></div><div><span>Direction</span><b>Biology × computation × experimentation</b></div></div>
-  </div>
-</section>
+<section id="about" class="section reveal"><div class="section-kicker"><span>01</span><span>PROFILE</span></div><div class="title-row"><h2>Curious by nature.<br><em>Experimental by choice.</em></h2><span class="section-code">PROFILE.01</span></div><div class="about-grid"><div class="about-copy"><p class="big">I’m <strong id="aboutName">Tahir Ahmad Bijran</strong>, an undergraduate Biotechnology student at the <strong>Central University of Kashmir</strong>.</p><p id="aboutSummary"></p><p id="aboutBio"></p></div><div class="facts"><div><span>Degree</span><b id="factDegree">B.Sc. (Hons) Biotechnology</b></div><div><span>University</span><b>Central University of Kashmir</b></div><div><span>Location</span><b id="factLocation">Jammu & Kashmir, India</b></div><div><span>Direction</span><b>Biology × computation × experimentation</b></div></div></div></section>
 
-<section id="research" class="section reveal">
-  <div class="section-kicker"><span>03</span><span>RESEARCH</span></div>
-  <div class="title-row"><h2>Areas I’m exploring</h2><span class="section-code">RESEARCH.06</span></div>
-  <div id="research-grid" class="research-grid"></div>
-</section>
+<section id="research" class="section reveal"><div class="section-kicker"><span>02</span><span>RESEARCH</span></div><div class="title-row"><h2>Areas I’m exploring</h2><span class="section-code">RESEARCH.06</span></div><div id="research-grid" class="research-grid"></div></section>
 
-<section id="expertise" class="section reveal">
-  <div class="section-kicker"><span>04</span><span>EXPERTISE</span></div>
-  <div class="title-row"><h2>Building the foundation</h2><span class="section-code">SKILLS / TOOLS / PRACTICE</span></div>
-  <div id="expertise-grid" class="expertise-grid"></div>
-  <div class="skill-panels"><div class="skill-panel"><span class="micro">PRACTICAL</span><h3>Laboratory skills</h3><div id="lab-skills" class="tags"></div></div><div class="skill-panel"><span class="micro">DIGITAL</span><h3>Tools & workflows</h3><div id="tools-skills" class="tags"></div></div><div class="skill-panel"><span class="micro">PRINCIPLES</span><h3>How I work</h3><div id="principles" class="principles"></div></div></div>
-</section>
+<section id="lab-dashboard" class="section reveal"><div class="section-kicker"><span>03</span><span>RESEARCH COMMAND CENTER</span></div><div class="title-row"><h2>Research <em>Dashboard</em></h2><span class="section-code">LIVE FROM PUBLIC DATA</span></div><div id="dashboardStats" class="dashboard-stats"></div><div class="research-stack"><div><span class="micro">MY RESEARCH STACK</span><div class="stack-flow"><span>Literature</span><b>→</b><span>Design</span><b>→</b><span>Experiment</span><b>→</b><span>Data</span><b>→</b><span>Visualization</span><b>→</b><span>Publication</span></div></div><div><span class="micro">PROGRESS MAP</span><div id="progressMap" class="progress-map"></div></div></div></section>
 
-<section id="projects" class="section reveal">
-  <div class="section-kicker"><span>05</span><span>WORK</span></div>
-  <div class="title-row"><h2>Projects & academic work</h2><span class="section-code">BUILD. DOCUMENT. ITERATE.</span></div>
-  <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="project">Projects</button><button class="filter" data-filter="academic">Academic</button></div>
-  <div id="project-grid" class="project-grid"></div>
-</section>
+<section id="expertise" class="section reveal"><div class="section-kicker"><span>04</span><span>EXPERTISE</span></div><div class="title-row"><h2>Building the foundation</h2><span class="section-code">SKILLS / TOOLS / PRACTICE</span></div><div id="expertise-grid" class="expertise-grid"></div><div class="skill-panels"><div class="skill-panel"><span class="micro">PRACTICAL</span><h3>Laboratory skills</h3><div id="lab-skills" class="tags"></div></div><div class="skill-panel"><span class="micro">DIGITAL</span><h3>Tools & workflows</h3><div id="tools-skills" class="tags"></div></div><div class="skill-panel"><span class="micro">PRINCIPLES</span><h3>How I work</h3><div id="principles" class="principles"></div></div></div></section>
 
-<section id="library" class="section reveal">
-  <div class="section-kicker"><span>06</span><span>DIGITAL LIBRARY</span></div>
-  <div class="title-row"><h2>Resources & documents</h2><span class="section-code">SEARCHABLE</span></div>
-  <div class="library-tools"><input id="search" placeholder="Search resources…" type="search"><span id="count"></span></div>
-  <div id="library-grid" class="library-grid"></div>
-</section>
+<section id="biotools" class="section reveal"><div class="section-kicker"><span>05</span><span>BIOTOOLS</span></div><div class="title-row"><h2>Browser-based <em>bioinformatics</em></h2><span class="section-code">NO SERVER REQUIRED</span></div><div class="tool-layout"><div class="tool-card"><div class="tool-tabs"><button class="tool-tab active" data-tool="stats">Sequence stats</button><button class="tool-tab" data-tool="revcomp">Reverse complement</button><button class="tool-tab" data-tool="translate">Translate</button><button class="tool-tab" data-tool="gc">GC content</button><button class="tool-tab" data-tool="mass">Molecular mass</button></div><textarea id="seqInput" class="sequence-input" spellcheck="false" placeholder="Paste DNA or RNA sequence here…"></textarea><div class="tool-actions"><button class="btn primary" id="runTool">Analyze sequence</button><button class="btn" id="clearTool">Clear</button></div><div id="toolResult" class="tool-result"><span class="micro">READY</span><p>Paste a sequence and choose a tool.</p></div></div><div class="tool-index"><span class="micro">TOOLKIT</span><div id="toolList"></div></div></div></section>
 
-<section id="field-notes" class="section reveal">
-  <div class="section-kicker"><span>07</span><span>FIELD NOTES</span></div>
-  <div class="title-row"><h2>Media, notes & updates</h2><span class="section-code">PUBLISHED FROM ADMIN</span></div>
-  <div id="content-grid" class="content-grid"></div>
-</section>
+<section id="data-studio" class="section reveal"><div class="section-kicker"><span>06</span><span>SCIENTIFIC DATA STUDIO</span></div><div class="title-row"><h2>Turn measurements into <em>evidence.</em></h2><span class="section-code">CSV / TAB / PASTE</span></div><div class="data-grid"><div class="tool-card"><label class="file-drop"><input id="csvInput" type="file" accept=".csv,text/csv"><span>Upload CSV</span><small>or paste two-column data below</small></label><textarea id="dataInput" class="data-input" spellcheck="false" placeholder="Time,OD\n0,0.08\n30,0.11\n60,0.18\n90,0.31"></textarea><div class="tool-actions"><button class="btn primary" id="plotData">Plot data</button><button class="btn" id="clearData">Clear</button><button class="btn" id="downloadCSV">Export CSV</button></div><div id="dataSummary" class="data-summary"></div></div><div class="chart-wrap"><canvas id="dataChart" width="900" height="500"></canvas><div id="chartEmpty" class="chart-empty">Your graph will appear here.</div></div></div></section>
 
-<section id="journey" class="section reveal">
-  <div class="section-kicker"><span>08</span><span>JOURNEY</span></div>
-  <div class="title-row"><h2>Academic timeline</h2><span class="section-code">EVOLUTION</span></div>
-  <div id="timeline" class="timeline"></div>
-</section>
+<section id="experiments" class="section reveal"><div class="section-kicker"><span>07</span><span>EXPERIMENTS</span></div><div class="title-row"><h2>Experiment <em>simulator & tracker</em></h2><span class="section-code">GROWTH / ANALYSIS</span></div><div class="experiment-grid"><div class="sim-card"><span class="micro">BACTERIAL GROWTH SIMULATOR</span><h3>Estimate OD over time</h3><div class="controls"><label>Initial OD <input id="simInitial" type="number" step="0.01" value="0.08"></label><label>Doubling time (min) <input id="simDouble" type="number" step="1" value="40"></label><label>Time (min) <input id="simTime" type="number" step="5" value="180"></label></div><button class="btn primary" id="runSim">Run simulation</button><div id="simResult" class="sim-result"></div></div><div id="experimentList" class="experiment-list"></div></div></section>
 
-<section id="contact" class="section contact reveal">
-  <div class="section-kicker"><span>09</span><span>CONNECT</span></div>
-  <h2>Let’s build something<br><em>worth documenting.</em></h2>
-  <p>For research discussions, collaboration, academic exchange or simply saying hello.</p>
-  <div class="contact-links"><a href="mailto:tahirbijran@cukashmir.edu.in"><span>Email</span><b>tahirbijran@cukashmir.edu.in ↗</b></a><a href="mailto:tahirbijran@gmail.com"><span>Alternative Email</span><b>tahirbijran@gmail.com ↗</b></a><a href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273" target="_blank"><span>LinkedIn</span><b>Connect on LinkedIn ↗</b></a><a href="https://github.com/BijranTahir" target="_blank"><span>GitHub</span><b>@BijranTahir ↗</b></a></div>
-</section>
+<section id="microscopy" class="section reveal"><div class="section-kicker"><span>08</span><span>MICROSCOPY</span></div><div class="title-row"><h2>Virtual <em>microscopy gallery</em></h2><span class="section-code">ZOOM / PAN / INSPECT</span></div><div id="microGallery" class="micro-gallery"></div><p class="micro-hint">Images published from the Admin Content Studio under the Media / Microscopy categories appear here automatically.</p></section>
+
+<section id="notebook" class="section reveal"><div class="section-kicker"><span>09</span><span>DIGITAL LAB NOTEBOOK</span></div><div class="title-row"><h2>Document the <em>process.</em></h2><span class="section-code">PUBLIC NOTES</span></div><div id="labnotesGrid" class="notes-grid"></div></section>
+
+<section id="literature" class="section reveal"><div class="section-kicker"><span>10</span><span>LITERATURE INTELLIGENCE</span></div><div class="title-row"><h2>Reading → notes → <em>research.</em></h2><span class="section-code">SEARCHABLE</span></div><div class="library-tools"><input id="paperSearch" placeholder="Search papers, authors, keywords…" type="search"><span id="paperCount"></span></div><div id="publicationGrid" class="publication-grid"></div><div class="assistant-card"><div><span class="micro">LOCAL RESEARCH ASSISTANT</span><h3>Ask the public research library</h3><p>Searches the research, literature, protocols and notes published on this site. It does not send your query to an external AI service.</p></div><div class="assistant-row"><input id="assistantInput" placeholder="e.g. microscopy, PCR, carbon dots…"><button class="btn primary" id="assistantAsk">Search library</button></div><div id="assistantAnswer" class="assistant-answer"></div></div></section>
+
+<section id="protocols" class="section reveal"><div class="section-kicker"><span>11</span><span>PROTOCOL LIBRARY</span></div><div class="title-row"><h2>Techniques, <em>organized.</em></h2><span class="section-code">EDUCATIONAL REFERENCE</span></div><div id="protocolGrid" class="protocol-grid"></div><p class="micro-hint">Educational reference only. Follow your institution’s approved SOPs, biosafety requirements and supervisor instructions for laboratory work.</p></section>
+
+<section id="projects" class="section reveal"><div class="section-kicker"><span>12</span><span>WORK</span></div><div class="title-row"><h2>Projects & academic work</h2><span class="section-code">BUILD. DOCUMENT. ITERATE.</span></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="project">Projects</button><button class="filter" data-filter="academic">Academic</button></div><div id="project-grid" class="project-grid"></div></section>
+
+<section id="library" class="section reveal"><div class="section-kicker"><span>13</span><span>DIGITAL LIBRARY</span></div><div class="title-row"><h2>Resources & documents</h2><span class="section-code">SEARCHABLE</span></div><div class="library-tools"><input id="search" placeholder="Search resources…" type="search"><span id="count"></span></div><div id="library-grid" class="library-grid"></div></section>
+
+<section id="field-notes" class="section reveal"><div class="section-kicker"><span>14</span><span>FIELD NOTES & MEDIA</span></div><div class="title-row"><h2>Published from <em>Admin Studio.</em></h2><span class="section-code">LIVE CONTENT</span></div><div id="content-grid" class="content-grid"></div></section>
+
+<section id="journey" class="section reveal"><div class="section-kicker"><span>15</span><span>JOURNEY</span></div><div class="title-row"><h2>Academic timeline</h2><span class="section-code">EVOLUTION</span></div><div id="timeline" class="timeline"></div></section>
+
+<section id="cv" class="section reveal"><div class="section-kicker"><span>16</span><span>ACADEMIC CV</span></div><div class="title-row"><h2>My scientific <em>CV.</em></h2><button id="printCV" class="btn primary">Print / Save PDF</button></div><div id="cvPreview" class="cv-preview"></div></section>
+
+<section id="collaborate" class="section reveal"><div class="section-kicker"><span>17</span><span>COLLABORATE</span></div><div class="title-row"><h2>Build something <em>together.</em></h2><span class="section-code">ACADEMIC / RESEARCH / TOOLS</span></div><form id="collabForm" class="collab-form"><div><label>Name<input name="name" required></label><label>Institution<input name="institution"></label></div><div><label>Research area<input name="area"></label><label>Collaboration type<select name="type"><option>Research discussion</option><option>Student collaboration</option><option>Bioinformatics / data</option><option>Scientific visualization</option><option>Academic project</option></select></label></div><label>Message<textarea name="message" required></textarea></label><button class="btn primary" type="submit">Prepare email ↗</button><small>The form opens your email client; no form data is stored by this static site.</small></form></section>
+
+<section id="contact" class="section contact reveal"><div class="section-kicker"><span>18</span><span>CONNECT</span></div><h2>Let’s build something<br><em>worth documenting.</em></h2><p>For research discussions, collaboration, academic exchange or simply saying hello.</p><div class="contact-links"><a href="mailto:tahirbijran@cukashmir.edu.in"><span>Email</span><b>tahirbijran@cukashmir.edu.in ↗</b></a><a href="mailto:tahirbijran@gmail.com"><span>Alternative Email</span><b>tahirbijran@gmail.com ↗</b></a><a href="https://www.linkedin.com/in/tahir-ahmad-bijran-183389273" target="_blank" rel="noopener"><span>LinkedIn</span><b>Connect on LinkedIn ↗</b></a><a href="https://github.com/BijranTahir" target="_blank" rel="noopener"><span>GitHub</span><b>@BijranTahir ↗</b></a></div></section>
 </main>
-<footer><span>© 2026 Tahir Ahmad Bijran</span><span>Biotechnology • Research • Computational Biology</span></footer>
+<footer><span>© 2026 Tahir Ahmad Bijran</span><span>BioLab OS • Biotechnology • Research • Computational Biology</span></footer>
+<div id="commandPalette" class="command-palette" aria-hidden="true"><div class="command-backdrop"></div><div class="command-box"><div class="command-head"><span class="micro">COMMAND PALETTE</span><button id="closeCommand" class="close">×</button></div><input id="commandInput" placeholder="Search sections, tools and resources…" autocomplete="off"><div id="commandResults"></div></div></div>
+<div id="imageModal" class="image-modal" aria-hidden="true"><button id="closeImage" class="close">×</button><img id="modalImage" alt="Microscopy image"><div id="modalCaption"></div></div>
 <script src="app.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
 </body></html>

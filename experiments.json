@@ -1,0 +1,4 @@
+[
+  {"title":"Bacterial Growth Curve Analysis","status":"Data analysis","category":"Microbiology","date":"2026","summary":"Analyze OD-versus-time measurements, identify growth phases and estimate doubling time.","progress":65,"tags":["OD600","growth curve","doubling time"]},
+  {"title":"Scientific Data Visualization","status":"Building","category":"Computational Biology","date":"2026","summary":"Develop reusable browser tools for plotting and interpreting experimental measurements.","progress":40,"tags":["CSV","graphs","statistics"]}
+]

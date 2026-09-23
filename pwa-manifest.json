@@ -1,0 +1,10 @@
+{
+  "name":"Tahir Ahmad Bijran — BioLab OS",
+  "short_name":"TB BioLab",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#06110f",
+  "theme_color":"#06110f",
+  "description":"Biotechnology, research, computational biology and scientific tools.",
+  "icons":[{"src":"assets/images/profile.jpg","sizes":"512x512","type":"image/jpeg","purpose":"any maskable"}]
+}

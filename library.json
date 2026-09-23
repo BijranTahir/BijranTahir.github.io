@@ -1,38 +1,30 @@
 [
   {
     "title": "CV / Resume",
-    "description": "CV of the Admin will appear here, once uploaded.",
+    "description": "Add the latest CV from the Admin Studio.",
     "type": "PDF",
     "file": "assets/documents/cv.pdf",
-    "category": "Documents",
-    "year": "",
-    "url": ""
+    "category": "Documents"
   },
   {
     "title": "Research Presentations",
-    "description": "Presentation files published by the Admin will appear here.",
+    "description": "Presentation files published from the Admin Studio.",
     "type": "PPTX",
     "file": "assets/presentations/",
-    "category": "Presentations",
-    "year": "",
-    "url": ""
+    "category": "Presentations"
   },
   {
     "title": "Certificates",
-    "description": "Academic certificates and credentials published by the Admin will appear here.",
+    "description": "Academic certificates and credentials published from the Admin Studio.",
     "type": "DOCUMENTS",
     "file": "assets/certificates/",
-    "category": "Certificates",
-    "year": "",
-    "url": ""
+    "category": "Certificates"
   },
   {
     "title": "Media Archive",
-    "description": "Images and videos published by the Admin will appear here.",
+    "description": "Images and videos published from the Admin Studio.",
     "type": "MEDIA",
     "file": "assets/images/",
-    "category": "Media",
-    "year": "",
-    "url": ""
+    "category": "Media"
   }
 ]

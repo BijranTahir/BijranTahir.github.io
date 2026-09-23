@@ -1,0 +1,7 @@
+[
+  {"name":"DNA / RNA Translator","description":"Translate a nucleotide sequence in three forward reading frames."},
+  {"name":"Reverse Complement","description":"Generate the reverse-complement sequence for DNA."},
+  {"name":"GC Content","description":"Calculate G+C percentage from a nucleotide sequence."},
+  {"name":"Sequence Statistics","description":"Count length, A/T/G/C and ambiguous bases."},
+  {"name":"Molecular Weight","description":"Estimate average molecular mass of a nucleotide sequence."}
+]

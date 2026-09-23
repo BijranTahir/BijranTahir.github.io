@@ -1,0 +1,6 @@
+[
+  {"title":"Aseptic Technique","category":"Microbiology","level":"Foundation","summary":"Core contamination-control principles for routine microbiology work.","sections":["Purpose","Workspace preparation","Aseptic handling","Common contamination points","Safety notes"],"status":"Reference"},
+  {"title":"Gram Staining","category":"Microbiology","level":"Foundation","summary":"A learning reference for differentiating bacterial cell-envelope staining responses.","sections":["Purpose","Reagents","Workflow","Microscopy observations","Interpretation","Safety notes"],"status":"Reference"},
+  {"title":"Agarose Gel Electrophoresis","category":"Molecular Biology","level":"Foundation","summary":"A conceptual and practical reference for separating DNA fragments by size.","sections":["Purpose","Gel preparation","Sample loading","Electrophoresis","Visualization","Troubleshooting"],"status":"Reference"},
+  {"title":"Spectrophotometry","category":"Biochemistry","level":"Foundation","summary":"Using absorbance measurements for concentration and growth-curve analysis.","sections":["Blanking","Wavelength selection","Measurement","Replicates","Data recording","Quality checks"],"status":"Reference"}
+]
