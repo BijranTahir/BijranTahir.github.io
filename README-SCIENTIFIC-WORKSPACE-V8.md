@@ -20,7 +20,6 @@ Production-ready root package for the GitHub Pages site.
 - ZIP archive integrity check passed.
 
 ## Important public-repository note
-This repository is public. Do not place API keys, passwords, GitHub tokens, unpublished research, raw private data, or other secrets in the published site or repository. User-created experiment/journal/inventory data in this build is stored in the browser rather than automatically committed to GitHub.
 
 ## Existing user media
 The package intentionally does not invent or overwrite personal media. Keep your existing `assets/` directory from your current repository when merging if it contains your profile photo, videos, PDFs, or other media.

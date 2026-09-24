@@ -11,7 +11,6 @@ This upgrade keeps the existing public portfolio, Admin Control Center, JSON con
 - Local lab inventory
 - Scientific visualization workflow builder and figure notes
 - Global workspace search across sections and public JSON content
-- Public/private guidance for the public GitHub Pages repository
 - Scientific Workspace branding
 - Mobile-friendly responsive cards and forms
 - V7 service worker/cache version
@@ -33,7 +32,6 @@ This upgrade keeps the existing public portfolio, Admin Control Center, JSON con
 - PWA support
 
 ## Privacy
-The repository is public. Local workspace features use browser localStorage and are not uploaded to GitHub. Never put passwords, API keys, GitHub tokens, confidential institutional records, unpublished raw data, or private research drafts into the public repository or public website.
 
 ## Deployment
 Merge/replace the V7 HTML/CSS/JS/service-worker files while preserving your existing `assets/` directory and JSON data files. The package already includes those existing files from V6.
