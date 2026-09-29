@@ -49,6 +49,41 @@ function parseData(){let txt=$('#dataInput').value.trim();if(!txt)return;let row
 function plotData(){let txt=$('#dataInput').value.trim();if(!txt)return;let rows=txt.split(/\r?\n/).map(r=>r.split(/\t|,/));let h=rows.shift();let xi=+$('#xCol').value||0,yi=+$('#yCol').value||1;let pts=rows.map(r=>[parseFloat(r[xi]),parseFloat(r[yi])]).filter(p=>p.every(Number.isFinite));let c=$('#chart'),ctx=c.getContext('2d'),w=c.width=c.clientWidth*devicePixelRatio,hgt=c.height=280*devicePixelRatio;ctx.clearRect(0,0,w,hgt);if(!pts.length)return;let minx=Math.min(...pts.map(p=>p[0])),maxx=Math.max(...pts.map(p=>p[0])),miny=Math.min(...pts.map(p=>p[1])),maxy=Math.max(...pts.map(p=>p[1]));let sx=x=>40+(x-minx)/Math.max(1,maxx-minx)*(w/devicePixelRatio-60),sy=y=>hgt/devicePixelRatio-35-(y-miny)/Math.max(1,maxy-miny)*(hgt/devicePixelRatio-55);ctx.strokeStyle='#23453d';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(40,10);ctx.lineTo(40,hgt/devicePixelRatio-35);ctx.lineTo(w/devicePixelRatio-15,hgt/devicePixelRatio-35);ctx.stroke();ctx.strokeStyle='#42e0b0';ctx.lineWidth=2;ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(sx(p[0]),sy(p[1])):ctx.moveTo(sx(p[0]),sy(p[1])));ctx.stroke();ctx.fillStyle='#4bd8e8';pts.forEach(p=>{ctx.beginPath();ctx.arc(sx(p[0]),sy(p[1]),4,0,Math.PI*2);ctx.fill()})}
 function renderWorkflow(){let a=read('workflow',['Input','Quality Control','Processing','Analysis','Visualization','Interpretation','Output']);$('#workflowNodes').innerHTML=a.map((x,i)=>`<div class="wf-node"><span>${i+1}</span><b>${esc(x)}</b></div>`).join('')}
 function loadMicro(files){[...files].filter(f=>f.type.startsWith('image/')).forEach(f=>{let r=new FileReader();r.onload=()=>{let d=$('#microGrid'),card=document.createElement('figure');card.className='media';card.innerHTML=`<img src="${r.result}" alt="Microscopy image"><figcaption>${esc(f.name)}</figcaption>`;d.prepend(card)};r.readAsDataURL(f)})}
+
+function initGlobalScienceBackground(){
+  const canvas=document.getElementById('globalScienceCanvas'); if(!canvas)return;
+  const ctx=canvas.getContext('2d',{alpha:true}); if(!ctx)return;
+  const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W=innerWidth,H=innerHeight,dpr=1,pts=[],raf=0,t0=performance.now(),mx=.5,my=.5;
+  const colors=['66,224,176','75,216,232','169,120,255'];
+  function resize(){
+    dpr=Math.min(2.5,window.devicePixelRatio||1);W=innerWidth;H=innerHeight;
+    canvas.width=Math.floor(W*dpr);canvas.height=Math.floor(H*dpr);canvas.style.width=W+'px';canvas.style.height=H+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n=Math.max(55,Math.min(150,Math.floor(W*H/11500)));
+    pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12,r:.35+Math.random()*1.35,p:Math.random()*Math.PI*2,z:.3+Math.random()*.9,c:colors[Math.floor(Math.random()*colors.length)]}));
+  }
+  function draw(now){
+    ctx.clearRect(0,0,W,H);const time=(now-t0)*.001;
+    const px=(mx-.5)*18,py=(my-.5)*18;
+    ctx.save();ctx.translate(px,py);ctx.globalCompositeOperation='lighter';
+    // Deep-space molecular particles and proximity bonds
+    for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<-10)p.x=W+10;if(p.x>W+10)p.x=-10;if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10;p.p+=.006;
+      const a=(.12+.16*(.5+.5*Math.sin(p.p+time)))*p.z;ctx.fillStyle=`rgba(${p.c},${a})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r*p.z,0,Math.PI*2);ctx.fill();
+    }
+    for(let i=0;i<pts.length;i++){const a=pts[i];for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<120){ctx.strokeStyle=`rgba(75,216,232,${(1-d/120)*.065*a.z})`;ctx.lineWidth=.45;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
+    // Slow scientific orbital rings
+    ctx.globalAlpha=.11;ctx.strokeStyle='#42e0b0';ctx.lineWidth=.7;
+    for(let k=0;k<3;k++){const cx=W*(.2+.3*k),cy=H*(.2+.27*Math.sin(time*.07+k)),rx=120+55*k,ry=42+18*k;ctx.save();ctx.translate(cx,cy);ctx.rotate(time*(.015+k*.006));ctx.beginPath();ctx.ellipse(0,0,rx,ry,0,0,Math.PI*2);ctx.stroke();ctx.restore();}
+    // A faint travelling scan beam gives the page continuous life without flashing
+    const beam=((time*.018)%1)*(W+400)-200;ctx.globalAlpha=.055;ctx.fillStyle='#42e0b0';ctx.fillRect(beam,0,2,H);ctx.fillRect(beam+8,0,1,H);
+    ctx.restore();
+    if(!reduced)raf=requestAnimationFrame(draw);
+  }
+  addEventListener('pointermove',e=>{mx=e.clientX/W;my=e.clientY/H},{passive:true});
+  addEventListener('resize',resize,{passive:true});resize();draw(performance.now());
+}
+
 function initScienceMotion(){
   const canvas=document.getElementById('scienceCanvas'); if(!canvas)return;
   const ctx=canvas.getContext('2d'); if(!ctx)return;
@@ -65,6 +100,7 @@ function initScienceMotion(){
 }
 function initReveal(){const sections=document.querySelectorAll('.section');if(!('IntersectionObserver' in window)){sections.forEach(s=>s.classList.add('in-view'));return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view')}),{threshold:.08});sections.forEach(s=>io.observe(s));}
 init();
+initGlobalScienceBackground();
 initScienceMotion();
 initReveal();
 })();

@@ -26,3 +26,44 @@ body{background-image:radial-gradient(circle at 50% 10%,#0a2820 0,transparent 34
 .viz-node{animation:nodeFloat 4s ease-in-out infinite}.viz-node:nth-child(4n){animation-delay:-1.2s}@keyframes nodeFloat{50%{transform:translateY(-3px)}}
 .knowledge:before,.knowledge:after{content:'';position:absolute;border:1px solid #42e0b018;border-radius:50%;inset:12%;animation:knowledgeSpin 25s linear infinite;pointer-events:none}.knowledge:after{inset:25%;animation-duration:17s;animation-direction:reverse}@keyframes knowledgeSpin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}.section{opacity:1;transform:none}}
+
+
+/* V11.1 — cinematic scientific motion system */
+#globalScienceCanvas{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.72;mix-blend-mode:screen}
+.ambient{z-index:-3;background:radial-gradient(ellipse at 50% 8%,#123f33 0%,#061813 30%,#04100d 62%,#010604 100%);}
+.ambient i{opacity:.24;filter:blur(85px);will-change:transform}
+.grid{z-index:-2;opacity:.055;background-size:72px 72px;animation:gridDrift 30s linear infinite}
+@keyframes gridDrift{to{background-position:72px 72px}}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:linear-gradient(120deg,transparent 0%,#42e0b006 35%,transparent 55%,#4bd8e806 75%,transparent 100%);background-size:220% 220%;animation:lightSweep 18s ease-in-out infinite}
+@keyframes lightSweep{0%,100%{background-position:0% 50%;opacity:.35}50%{background-position:100% 50%;opacity:.75}}
+.topbar,.section,footer{position:relative;z-index:1}
+.hero-core{transform:translate3d(var(--my,0),var(--mx,0),0);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.core{position:relative;overflow:hidden}
+.core:before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent 0 65%,#42e0b030 75%,transparent 82%);animation:coreSweep 7s linear infinite;z-index:2;pointer-events:none}
+.core img{position:relative;z-index:1}
+@keyframes coreSweep{to{transform:rotate(360deg)}}
+.card,.panel,.calc,.list-item,.metric,.contact-grid a,.viz-board,.knowledge-node{position:relative;overflow:hidden;isolation:isolate}
+.card:before,.panel:before,.calc:before,.list-item:before,.metric:before,.contact-grid a:before,.viz-board:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#42e0b00d 42%,#4bd8e81a 50%,transparent 62%);transform:translateX(-120%);animation:cardSheen 8s ease-in-out infinite;pointer-events:none;z-index:-1}
+.card:nth-child(2n):before{animation-delay:-2.5s}.card:nth-child(3n):before{animation-delay:-5s}
+@keyframes cardSheen{0%,58%,100%{transform:translateX(-120%)}72%{transform:translateX(120%)}}
+.card{transform-style:preserve-3d;will-change:transform;transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .45s}
+.card:hover{transform:translateY(-9px) rotateX(1deg) rotateY(-1deg) scale(1.008);border-color:#42e0b060;box-shadow:0 35px 100px #000b,0 0 45px #42e0b018}
+.card h3,.card p,.card small,.card .progress{position:relative}
+.panel:hover{border-color:#286657;box-shadow:0 28px 100px #0009,0 0 35px #42e0b00b}
+.btn,.mini,.tool-tabs button,.round{transition:transform .3s var(--ease),box-shadow .3s,border-color .3s,background .3s}
+.btn:hover,.mini:hover{transform:translateY(-3px);box-shadow:0 12px 35px #42e0b018}
+.btn.primary{box-shadow:0 0 0 #42e0b000}
+.btn.primary:hover{box-shadow:0 12px 40px #42e0b040}
+.signal-strip span{animation:statusFloat 4s ease-in-out infinite}.signal-strip span:nth-child(2){animation-delay:-1s}.signal-strip span:nth-child(3){animation-delay:-2s}.signal-strip span:nth-child(4){animation-delay:-3s}
+@keyframes statusFloat{50%{transform:translateY(-2px)}}
+.metrics .metric{animation:metricIn .7s var(--ease) both}.metrics .metric:nth-child(2){animation-delay:.06s}.metrics .metric:nth-child(3){animation-delay:.12s}.metrics .metric:nth-child(4){animation-delay:.18s}.metrics .metric:nth-child(5){animation-delay:.24s}.metrics .metric:nth-child(6){animation-delay:.30s}
+@keyframes metricIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+.workflow .wf-node{box-shadow:0 0 25px #42e0b010;animation:wfFloat 5s ease-in-out infinite}.workflow .wf-node:nth-child(2){animation-delay:-1s}.workflow .wf-node:nth-child(3){animation-delay:-2s}.workflow .wf-node:nth-child(4){animation-delay:-3s}
+@keyframes wfFloat{50%{transform:translateY(-4px)}}
+.knowledge-node{animation:knowledgeFloat 5s ease-in-out infinite}.knowledge-node:nth-child(2){animation-delay:-1s}.knowledge-node:nth-child(3){animation-delay:-2s}.knowledge-node:nth-child(4){animation-delay:-3s}.knowledge-node:nth-child(5){animation-delay:-4s}
+@keyframes knowledgeFloat{50%{transform:translateY(-6px)}}
+.section.in-view .kicker{animation:kickerReveal .8s var(--ease) both}.section.in-view h2{animation:titleReveal .9s var(--ease) both}
+@keyframes kickerReveal{from{opacity:0;letter-spacing:.5em}to{opacity:1;letter-spacing:.2em}}
+@keyframes titleReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(max-width:560px){#globalScienceCanvas{opacity:.48}.ambient i{filter:blur(60px);opacity:.18}.grid{background-size:52px 52px}.card:hover{transform:translateY(-5px) scale(1.003)}.hero-core{transform:none!important}}
+@media(prefers-reduced-motion:reduce){#globalScienceCanvas,body:before{display:none}.grid{animation:none}.hero-core{transform:none!important}.card,.panel,.metric,.knowledge-node,.workflow .wf-node{animation:none!important}.card:before,.panel:before,.calc:before,.list-item:before,.metric:before,.contact-grid a:before,.viz-board:before{display:none}}
