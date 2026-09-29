@@ -49,5 +49,22 @@ function parseData(){let txt=$('#dataInput').value.trim();if(!txt)return;let row
 function plotData(){let txt=$('#dataInput').value.trim();if(!txt)return;let rows=txt.split(/\r?\n/).map(r=>r.split(/\t|,/));let h=rows.shift();let xi=+$('#xCol').value||0,yi=+$('#yCol').value||1;let pts=rows.map(r=>[parseFloat(r[xi]),parseFloat(r[yi])]).filter(p=>p.every(Number.isFinite));let c=$('#chart'),ctx=c.getContext('2d'),w=c.width=c.clientWidth*devicePixelRatio,hgt=c.height=280*devicePixelRatio;ctx.clearRect(0,0,w,hgt);if(!pts.length)return;let minx=Math.min(...pts.map(p=>p[0])),maxx=Math.max(...pts.map(p=>p[0])),miny=Math.min(...pts.map(p=>p[1])),maxy=Math.max(...pts.map(p=>p[1]));let sx=x=>40+(x-minx)/Math.max(1,maxx-minx)*(w/devicePixelRatio-60),sy=y=>hgt/devicePixelRatio-35-(y-miny)/Math.max(1,maxy-miny)*(hgt/devicePixelRatio-55);ctx.strokeStyle='#23453d';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(40,10);ctx.lineTo(40,hgt/devicePixelRatio-35);ctx.lineTo(w/devicePixelRatio-15,hgt/devicePixelRatio-35);ctx.stroke();ctx.strokeStyle='#42e0b0';ctx.lineWidth=2;ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(sx(p[0]),sy(p[1])):ctx.moveTo(sx(p[0]),sy(p[1])));ctx.stroke();ctx.fillStyle='#4bd8e8';pts.forEach(p=>{ctx.beginPath();ctx.arc(sx(p[0]),sy(p[1]),4,0,Math.PI*2);ctx.fill()})}
 function renderWorkflow(){let a=read('workflow',['Input','Quality Control','Processing','Analysis','Visualization','Interpretation','Output']);$('#workflowNodes').innerHTML=a.map((x,i)=>`<div class="wf-node"><span>${i+1}</span><b>${esc(x)}</b></div>`).join('')}
 function loadMicro(files){[...files].filter(f=>f.type.startsWith('image/')).forEach(f=>{let r=new FileReader();r.onload=()=>{let d=$('#microGrid'),card=document.createElement('figure');card.className='media';card.innerHTML=`<img src="${r.result}" alt="Microscopy image"><figcaption>${esc(f.name)}</figcaption>`;d.prepend(card)};r.readAsDataURL(f)})}
+function initScienceMotion(){
+  const canvas=document.getElementById('scienceCanvas'); if(!canvas)return;
+  const ctx=canvas.getContext('2d'); if(!ctx)return;
+  const host=canvas.parentElement; let W=0,H=0,dpr=1,pts=[],raf=0,mouse={x:.5,y:.5};
+  const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function resize(){dpr=Math.min(2,devicePixelRatio||1);W=host.clientWidth;H=host.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);let n=Math.max(28,Math.min(70,Math.floor(W*H/9000)));pts=Array.from({length:n},(_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.4,p:Math.random()*Math.PI*2}));}
+  function draw(t){ctx.clearRect(0,0,W,H);ctx.globalCompositeOperation='lighter';
+    for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;p.p+=.01;let a=.22+.18*Math.sin(p.p+t*.001);ctx.fillStyle=`rgba(66,224,176,${a})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
+    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){let a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<105){ctx.strokeStyle=`rgba(75,216,232,${(1-d/105)*.09})`;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
+    if(!reduced)raf=requestAnimationFrame(draw);
+  }
+  host.addEventListener('pointermove',e=>{let r=host.getBoundingClientRect();mouse.x=(e.clientX-r.left)/W;mouse.y=(e.clientY-r.top)/H;host.style.setProperty('--mx',((mouse.x-.5)*10).toFixed(2)+'px');host.style.setProperty('--my',((mouse.y-.5)*10).toFixed(2)+'px')},{passive:true});
+  window.addEventListener('resize',resize,{passive:true});resize();draw(performance.now());
+}
+function initReveal(){const sections=document.querySelectorAll('.section');if(!('IntersectionObserver' in window)){sections.forEach(s=>s.classList.add('in-view'));return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view')}),{threshold:.08});sections.forEach(s=>io.observe(s));}
 init();
+initScienceMotion();
+initReveal();
 })();
