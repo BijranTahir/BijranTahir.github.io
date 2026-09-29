@@ -2,31 +2,37 @@
   {
     "title": "Molecular Biology",
     "description": "Exploring DNA and RNA structure, replication, transcription, gene expression, genetics and the molecular mechanisms that connect sequence to cellular function.",
-    "category": "Research"
+    "category": "Research",
+    "progress": 27
   },
   {
     "title": "Nanobiotechnology",
     "description": "Exploring nanoscale materials and biological interfaces, with interest in optical sensing, functional nanomaterials and bio-enabled technologies.",
-    "category": "Research"
+    "category": "Research",
+    "progress": 64
   },
   {
     "title": "Computational Biology",
     "description": "Learning how computation, data analysis and automation can support biological discovery, interpretation and reproducible research workflows.",
-    "category": "Research"
+    "category": "Research",
+    "progress": 43
   },
   {
     "title": "Bioinformatics",
     "description": "Building familiarity with sequence-centric thinking, biological databases, computational tools and data-driven approaches to life-science questions.",
-    "category": "Research"
+    "category": "Research",
+    "progress": 78
   },
   {
     "title": "Laboratory Science",
     "description": "Developing practical understanding of microscopy, microbiology, staining, observation, documentation and experimental workflows.",
-    "category": "Research"
+    "category": "Research",
+    "progress": 52
   },
   {
     "title": "Scientific Communication",
     "description": "Turning complex scientific ideas into clear presentations, visual explanations, organized notes and accessible digital resources.",
-    "category": "Research"
+    "category": "Research",
+    "progress": 86
   }
 ]

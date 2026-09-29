@@ -10,7 +10,7 @@
 - Published media + text automatically appears in the public **Field Notes** section
 - File Manager for repository uploads/deletion
 - Searchable library
-- Responsive high-tech UI with dark/light mode, animated ambient background and responsive navigation
+- Responsive high-tech UI with dark mode, animated ambient background and responsive navigation
 
 ## Files
 
