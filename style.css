@@ -114,3 +114,12 @@ html{scroll-behavior:smooth}
 .card,.panel,.calc,.list-item,.metric,.knowledge-node,.workflow .wf-node,.btn,.mini,.orcid-chip,.orcid-card{backface-visibility:hidden}
 @media(max-width:900px){#globalScienceCanvas{opacity:.42}.ambient i{opacity:.16}.card:before,.panel:before,.calc:before,.list-item:before,.metric:before,.contact-grid a:before,.viz-board:before{animation-duration:14s}}
 @media(max-width:560px){#globalScienceCanvas{opacity:.30}.grid{animation-duration:45s}.workflow .wf-node,.knowledge-node,.viz-node{animation-duration:7s}}
+
+/* Lab Suite Pro — deliberately presented as a separate application */
+.external-product-section .external-tool-card{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px;border:1px solid rgba(66,224,176,.22);border-radius:24px;background:linear-gradient(135deg,rgba(66,224,176,.08),rgba(75,216,232,.035));box-shadow:0 0 35px rgba(66,224,176,.07);position:relative;overflow:hidden}
+.external-product-section .external-tool-card:before{content:"";position:absolute;inset:-1px;background:linear-gradient(110deg,transparent 20%,rgba(75,216,232,.12) 50%,transparent 80%);transform:translateX(-100%);animation:labSuiteSheen 6s ease-in-out infinite;pointer-events:none}
+.external-tool-card>*{position:relative;z-index:1}.tool-badge{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(66,224,176,.28);font-size:.68rem;letter-spacing:.12em;color:#66e0b0}.external-tool-card h3{font-size:1.65rem;margin:.5rem 0}.external-tool-card p{max-width:700px}.external-tool-card .muted{opacity:.65;font-size:.9rem}.lab-suite-link{white-space:nowrap}
+.lab-suite-drawer-link{border-color:rgba(66,224,176,.32)!important;color:#66e0b0!important}
+@keyframes labSuiteSheen{0%,55%{transform:translateX(-100%)}80%,100%{transform:translateX(100%)}}
+@media(max-width:720px){.external-product-section .external-tool-card{flex-direction:column;align-items:flex-start}.lab-suite-link{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){.external-product-section .external-tool-card:before{animation:none}}

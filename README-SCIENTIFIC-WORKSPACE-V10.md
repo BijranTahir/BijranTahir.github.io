@@ -10,7 +10,6 @@ Dark-only public scientific portfolio and browser-based workspace.
 - Literature and publication library
 - BioTools: sequence analysis, GC%, reverse complement, translation, basic mass estimate
 - Scientific Data Studio with CSV/TSV parsing and plotting
-- Scientific calculator suite
 - Computational biology workflow builder
 - Microscopy image viewer from local files
 - Visualization Studio
