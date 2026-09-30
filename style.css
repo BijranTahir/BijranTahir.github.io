@@ -123,3 +123,9 @@ html{scroll-behavior:smooth}
 @keyframes labSuiteSheen{0%,55%{transform:translateX(-100%)}80%,100%{transform:translateX(100%)}}
 @media(max-width:720px){.external-product-section .external-tool-card{flex-direction:column;align-items:flex-start}.lab-suite-link{width:100%;text-align:center}}
 @media(prefers-reduced-motion:reduce){.external-product-section .external-tool-card:before{animation:none}}
+
+/* V12.4 — Lab Suite Pro identity treatment */
+.identity-link.labsuite-link{--brand:#38e0b0}
+.labsuite-link .labsuite-icon{display:grid;place-items:center;color:#38e0b0;background:rgba(56,224,176,.09);border:1px solid rgba(56,224,176,.28);box-shadow:0 0 24px rgba(56,224,176,.12)}
+.labsuite-link .labsuite-icon svg{width:21px;height:21px;fill:currentColor}
+.labsuite-link:hover .labsuite-icon{box-shadow:0 0 30px rgba(56,224,176,.28),inset 0 0 18px rgba(56,224,176,.08);transform:translateY(-1px) scale(1.04)}
