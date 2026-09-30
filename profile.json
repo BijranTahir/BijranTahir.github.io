@@ -1,9 +1,9 @@
 {
   "name": "Tahir Ahmad Bijran",
-  "title": "Biotechnology • Research • Computational Biology",
+  "title": "Biotechnology \u2022 Research \u2022 Computational Biology",
   "tagline": "Learning biology deeply. Building with technology. Documenting the journey.",
-  "bio": "I’m an undergraduate Biotechnology student at the Central University of Kashmir, developing an interdisciplinary foundation across molecular biology, nanobiotechnology, computational biology, microbiology and practical laboratory science.",
-  "summary": "My portfolio brings together academic learning, research exploration, digital projects, scientific communication and the resources I create along the way. I’m interested in understanding biological systems while using computation, visualization and modern digital tools to make scientific work more useful and accessible.",
+  "bio": "I\u2019m an undergraduate Biotechnology student at the Central University of Kashmir, developing an interdisciplinary foundation across molecular biology, nanobiotechnology, computational biology, microbiology and practical laboratory science.",
+  "summary": "My portfolio brings together academic learning, research exploration, digital projects, scientific communication and the resources I create along the way. I\u2019m interested in understanding biological systems while using computation, visualization and modern digital tools to make scientific work more useful and accessible.",
   "email": "tahirbijran@cukashmir.edu.in",
   "linkedin": "https://www.linkedin.com/in/tahir-ahmad-bijran-183389273",
   "github": "BijranTahir",
@@ -51,5 +51,7 @@
     "Continuous learning"
   ],
   "goals": "Build a strong interdisciplinary foundation for future research in biotechnology and computational life sciences, while turning academic learning into practical, well-documented work.",
-  "alternateEmail": "tahirbijran@gmail.com"
+  "alternateEmail": "tahirbijran@gmail.com",
+  "orcid": "0009-0002-7115-4499",
+  "orcidUrl": "https://orcid.org/0009-0002-7115-4499"
 }

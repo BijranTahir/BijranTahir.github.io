@@ -67,3 +67,26 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;back
 @keyframes titleReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @media(max-width:560px){#globalScienceCanvas{opacity:.48}.ambient i{filter:blur(60px);opacity:.18}.grid{background-size:52px 52px}.card:hover{transform:translateY(-5px) scale(1.003)}.hero-core{transform:none!important}}
 @media(prefers-reduced-motion:reduce){#globalScienceCanvas,body:before{display:none}.grid{animation:none}.hero-core{transform:none!important}.card,.panel,.metric,.knowledge-node,.workflow .wf-node{animation:none!important}.card:before,.panel:before,.calc:before,.list-item:before,.metric:before,.contact-grid a:before,.viz-board:before{display:none}}
+
+/* V12 — scientific identity + premium glow + project records */
+:root{--orcid:#a6ce39;--glow:#42e0b0;--glow2:#4bd8e8}
+.orcid-chip,.orcid-card{position:relative;overflow:hidden;border:1px solid #3c6b52;background:linear-gradient(135deg,#0a2119cc,#071815cc);color:#d9fff2;text-decoration:none;box-shadow:0 0 22px #42e0b014, inset 0 0 25px #42e0b008;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.orcid-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;font:700 9px ui-monospace,monospace;letter-spacing:.06em}
+.orcid-chip i{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--orcid);color:#13200a;font-style:normal;font-weight:900}
+.orcid-chip:hover,.orcid-card:hover{transform:translateY(-3px);border-color:#a6ce3966;box-shadow:0 0 32px #a6ce3930,0 14px 45px #0008}
+.orcid-card{display:flex;flex-direction:column;gap:7px;padding:18px 20px;border-radius:18px;min-width:260px}
+.orcid-card span{font:800 10px ui-monospace,monospace;letter-spacing:.2em;color:var(--orcid)}
+.orcid-card b{font:800 15px ui-monospace,monospace;letter-spacing:.04em}
+.orcid-card small{color:#7fa69c}
+.scientific-id{margin-top:28px;display:flex;align-items:stretch;justify-content:space-between;gap:20px;padding:20px;border:1px solid #164337;border-radius:20px;background:linear-gradient(110deg,#06130fdd,#091c17bb);box-shadow:0 0 45px #42e0b010,inset 0 0 35px #42e0b008}
+.scientific-id h3{margin:.25rem 0;font-size:24px}.scientific-id p{margin:0;color:#83a79e}
+.contact-orcid{border-color:#526c2d!important}.contact-orcid b{color:#dff5c5}
+.project-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}.project-card .mini{padding:9px 12px}
+.project-modal-box{position:relative;width:min(900px,92vw);max-height:84vh;overflow:auto;padding:34px;border:1px solid #285f50;border-radius:24px;background:linear-gradient(145deg,#071712f5,#04100df5);box-shadow:0 40px 140px #000d,0 0 70px #42e0b01c;backdrop-filter:blur(24px);transform:translateY(20px) scale(.98);transition:transform .35s var(--ease)}
+.modal.open .project-modal-box{transform:none}.modal-x{position:absolute;right:18px;top:16px;border:1px solid #245448;background:#071712;color:#b8e9dc;border-radius:10px;width:38px;height:38px;font-size:24px;cursor:pointer}.modal-lead{font-size:16px;color:#a8c7be;max-width:760px}.project-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.project-detail-grid>div{padding:16px;border:1px solid #163c32;border-radius:16px;background:#071612aa}.project-detail-grid small{color:#5edab9;font:700 9px ui-monospace,monospace;letter-spacing:.15em}.project-detail-grid p{margin:7px 0 0;color:#c0d8d1;white-space:pre-wrap}
+.card,.panel,.calc,.metric,.list-item,.contact-grid a,.viz-board,.scientific-id,.orcid-card{box-shadow:0 0 0 1px #42e0b006,0 18px 65px #0007}
+.card:hover,.calc:hover,.contact-grid a:hover,.metric:hover{box-shadow:0 24px 90px #000a,0 0 38px #42e0b024,0 0 1px #42e0b080}
+.card:after,.panel:after,.calc:after,.metric:after,.contact-grid a:after,.scientific-id:after{content:'';position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;background:linear-gradient(120deg,transparent 15%,#42e0b018 40%,transparent 55%,#4bd8e810 80%,transparent);background-size:220% 100%;animation:borderGlow 7s linear infinite;opacity:.55}
+@keyframes borderGlow{to{background-position:-220% 0}}
+@media(max-width:650px){.scientific-id{flex-direction:column}.orcid-card{min-width:0}.project-detail-grid{grid-template-columns:1fr}.project-modal-box{padding:26px 18px}}
+@media(prefers-reduced-motion:reduce){.card:after,.panel:after,.calc:after,.metric:after,.contact-grid a:after,.scientific-id:after{animation:none}.orcid-chip,.orcid-card{transition:none}}
