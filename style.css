@@ -105,3 +105,12 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;back
 .linkedin-link:hover{border-color:#3d8ee666;box-shadow:0 18px 55px #0009,0 0 35px #3d8ee620}.github-link:hover{border-color:#a5d8c866}.gmail-link:hover{border-color:#ff777766}.orcid-link:hover{border-color:#a6ce3966}.web-link:hover{border-color:#42e0b066}.edu-link:hover{border-color:#7d9dff66}
 @media(max-width:900px){.identity-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.identity-links{grid-template-columns:1fr}.identity-link{min-height:62px}}
+
+/* V12.2 — butter-smooth performance pass */
+html{scroll-behavior:smooth}
+#globalScienceCanvas,#scienceCanvas{contain:strict}
+.ambient i{will-change:transform;backface-visibility:hidden}
+.grid{will-change:background-position}
+.card,.panel,.calc,.list-item,.metric,.knowledge-node,.workflow .wf-node,.btn,.mini,.orcid-chip,.orcid-card{backface-visibility:hidden}
+@media(max-width:900px){#globalScienceCanvas{opacity:.42}.ambient i{opacity:.16}.card:before,.panel:before,.calc:before,.list-item:before,.metric:before,.contact-grid a:before,.viz-board:before{animation-duration:14s}}
+@media(max-width:560px){#globalScienceCanvas{opacity:.30}.grid{animation-duration:45s}.workflow .wf-node,.knowledge-node,.viz-node{animation-duration:7s}}

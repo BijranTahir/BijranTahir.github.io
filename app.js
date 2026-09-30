@@ -57,16 +57,17 @@ function initGlobalScienceBackground(){
   const canvas=document.getElementById('globalScienceCanvas'); if(!canvas)return;
   const ctx=canvas.getContext('2d',{alpha:true}); if(!ctx)return;
   const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let W=innerWidth,H=innerHeight,dpr=1,pts=[],raf=0,t0=performance.now(),mx=.5,my=.5;
+  let W=innerWidth,H=innerHeight,dpr=1,pts=[],raf=0,t0=performance.now(),mx=.5,my=.5,last=0,frame=0;
   const colors=['66,224,176','75,216,232','169,120,255'];
   function resize(){
-    dpr=Math.min(2.5,window.devicePixelRatio||1);W=innerWidth;H=innerHeight;
+    dpr=Math.min(1.5,window.devicePixelRatio||1);W=innerWidth;H=innerHeight;
     canvas.width=Math.floor(W*dpr);canvas.height=Math.floor(H*dpr);canvas.style.width=W+'px';canvas.style.height=H+'px';
     ctx.setTransform(dpr,0,0,dpr,0,0);
-    const n=Math.max(55,Math.min(150,Math.floor(W*H/11500)));
+    const n=Math.max(34,Math.min(78,Math.floor(W*H/19000)));
     pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12,r:.35+Math.random()*1.35,p:Math.random()*Math.PI*2,z:.3+Math.random()*.9,c:colors[Math.floor(Math.random()*colors.length)]}));
   }
   function draw(now){
+    if(now-last<16){raf=requestAnimationFrame(draw);return;} last=now; frame++;
     ctx.clearRect(0,0,W,H);const time=(now-t0)*.001;
     const px=(mx-.5)*18,py=(my-.5)*18;
     ctx.save();ctx.translate(px,py);ctx.globalCompositeOperation='lighter';
@@ -74,7 +75,7 @@ function initGlobalScienceBackground(){
     for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<-10)p.x=W+10;if(p.x>W+10)p.x=-10;if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10;p.p+=.006;
       const a=(.12+.16*(.5+.5*Math.sin(p.p+time)))*p.z;ctx.fillStyle=`rgba(${p.c},${a})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r*p.z,0,Math.PI*2);ctx.fill();
     }
-    for(let i=0;i<pts.length;i++){const a=pts[i];for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<120){ctx.strokeStyle=`rgba(75,216,232,${(1-d/120)*.065*a.z})`;ctx.lineWidth=.45;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
+    if(frame%2===0) for(let i=0;i<pts.length;i++){const a=pts[i];for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<120){ctx.strokeStyle=`rgba(75,216,232,${(1-d/120)*.065*a.z})`;ctx.lineWidth=.45;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
     // Slow scientific orbital rings
     ctx.globalAlpha=.11;ctx.strokeStyle='#42e0b0';ctx.lineWidth=.7;
     for(let k=0;k<3;k++){const cx=W*(.2+.3*k),cy=H*(.2+.27*Math.sin(time*.07+k)),rx=120+55*k,ry=42+18*k;ctx.save();ctx.translate(cx,cy);ctx.rotate(time*(.015+k*.006));ctx.beginPath();ctx.ellipse(0,0,rx,ry,0,0,Math.PI*2);ctx.stroke();ctx.restore();}
@@ -92,7 +93,7 @@ function initScienceMotion(){
   const ctx=canvas.getContext('2d'); if(!ctx)return;
   const host=canvas.parentElement; let W=0,H=0,dpr=1,pts=[],raf=0,mouse={x:.5,y:.5};
   const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function resize(){dpr=Math.min(2,devicePixelRatio||1);W=host.clientWidth;H=host.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);let n=Math.max(28,Math.min(70,Math.floor(W*H/9000)));pts=Array.from({length:n},(_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.4,p:Math.random()*Math.PI*2}));}
+  function resize(){dpr=Math.min(1.5,devicePixelRatio||1);W=host.clientWidth;H=host.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);let n=Math.max(22,Math.min(48,Math.floor(W*H/13000)));pts=Array.from({length:n},(_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.4,p:Math.random()*Math.PI*2}));}
   function draw(t){ctx.clearRect(0,0,W,H);ctx.globalCompositeOperation='lighter';
     for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;p.p+=.01;let a=.22+.18*Math.sin(p.p+t*.001);ctx.fillStyle=`rgba(66,224,176,${a})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
     for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){let a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<105){ctx.strokeStyle=`rgba(75,216,232,${(1-d/105)*.09})`;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
