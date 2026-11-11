@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "CV",
+    "description": "CV/Resume ",
+    "body": "",
+    "category": "CV/Resume",
+    "type": "application/pdf",
+    "date": "2026-11-11",
+    "featured": false,
+    "media": "assets/documents/CV.pdf"
+  }
+]
